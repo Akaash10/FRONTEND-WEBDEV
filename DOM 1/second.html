@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" onsubmit="event.preventDefault();">
+      <label for="num1">1st Number:</label>
+      <input type="text" name="num1" id="firstNumber" /><br />
+      <label for="num2">2nd Number:</label>
+      <input type="text" name="num2" id="secondNumber" /><br />
+      <button onclick="multiply()">Multiply</button>
+      <button onclick="divide()">Divide</button><br>
+      <span id="result"></span>
+    </form>
+  </body>
+  <script>
+    function multiply() {
+      var f = Number(document.getElementById("firstNumber").value);
+      var s = Number(document.getElementById("secondNumber").value);
+      var r=document.getElementById("result");
+      if (!isNaN(f) && !isNaN(s)) {
+        r.innerText = f * s;
+      } else {
+        r.innerText = "Should be in number format";
+      }
+    }
+    function divide() {
+        var f = Number(document.getElementById("firstNumber").value);
+      var s = Number(document.getElementById("secondNumber").value);
+      var r=document.getElementById("result");
+      if (!isNaN(f) && !isNaN(s)) {
+        r.innerText = f / s;
+      } else {
+        r.innerText = "Should be in number format";
+      }
+    }
+  </script>
+</html>

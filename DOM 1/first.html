@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="myForm" method="post">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" onchange="checkName()" />
+      <button type="submit" id="btn" onclick="validateForm()">SUBMIT</button>
+    </form>
+  </body>
+  <script>
+    function validateForm() {
+      var name = document.getElementById("name").value;
+      var button = document.getElementById("btn");
+      if (name.length === 0) {
+        alert("Name cannot be empty");
+        button.disabled = true;
+      }
+    }
+    function checkName() {
+      var button = document.getElementById("btn");
+      button.disabled = false;
+    }
+  </script>
+</html>
