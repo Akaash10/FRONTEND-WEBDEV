@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Select Country:</label>
+    <select name="state" id="s" onchange="getState()">
+        <option value="">Select</option>
+        <option value="india">India</option>
+        <option value="aus">Australia</option>
+        <option value="uk">United Kingdom</option>
+        <option value="usa">America</option>
+        <option value="germany">Germany</option>
+    </select><br><br>
+    <label for="">Capital</label>
+    <input type="text" id="result" readonly>
+</body>
+<script>
+    function getState(){
+        var state=document.getElementById("s").value;
+        var r=document.getElementById("result");
+        if(state===""){
+            r.value="";
+        }
+        else if(state==="india"){
+            r.value="New Delhi";
+        }
+        else if(state==="aus"){
+            r.value="Melbourne";
+        }
+        else if(state==="uk"){
+            r.value="Poland";
+        }
+        else if(state==="usa"){
+            r.value="Texas";
+        }
+        else{
+            r.value="Paris";
+        }
+    }
+</script>
+</html>

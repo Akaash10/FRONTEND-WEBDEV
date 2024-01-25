@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+    </ul>
+    <button onclick="addContent()">Add</button>
+</body>
+<script>
+    function addContent(){
+        var list=document.getElementById("myList");
+        var name=prompt("Enter name to get added:");
+        var dup=document.createElement("li");
+        dup.innerText=name;
+        list.appendChild(dup);
+    }
+</script>
+</html>

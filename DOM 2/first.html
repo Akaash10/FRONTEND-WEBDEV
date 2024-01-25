@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="perc">Enter Percentage</label><br />
+    <input type="text" id="perc" /><br /><br />
+    <button type="submit" onclick="Validate()">SUBMIT</button>
+    <p id="text"></p>
+  </body>
+  <script>
+    function Validate() {
+      var percentage = Number(document.getElementById("perc").value);
+      var r = document.getElementById("text");
+      if (!isNaN(percentage)) {
+        if (percentage >= 80 && percentage <= 100) {
+          r.innerText = "Best";
+          r.style.color = "green";
+        } else if (percentage >= 60 && percentage <= 79) {
+          r.innerText = "Good";
+          r.style.color = "blue";
+        }
+        if (percentage >= 50 && percentage <= 59) {
+          r.innerText = "Better";
+          r.style.color = "orange";
+        }
+        if (percentage < 50) {
+          r.innerText = "Not Eligible";
+          r.style.color = "red";
+        }
+      } else {
+        r.innerText = "Should be in number format";
+      }
+    }
+  </script>
+</html>
